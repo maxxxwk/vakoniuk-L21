@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Custom Views</string>
+    <string name="increase_power_button_text">+</string>
+    <string name="decrease_power_button_text">-</string>
+    <string name="button_start_second_task_activity">Second task</string>
+    <string name="price_text_view">UAH %.2f</string>
+    <string name="product_card_title">Title</string>
+    <string name="product_card_subtitle">Subtitle</string>
 </resources>

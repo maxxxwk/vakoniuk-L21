@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/second_activity_padding">
+
+    <com.maxxxwk.customviews.ProductCardView
+        android:id="@+id/productCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:price="25.5"
+        app:priceTextSize="@dimen/product_card_price_TextView_default_textSize"
+        app:rating="3.5"
+        app:subtitleText="@string/product_card_subtitle"
+        app:subtitleTextSize="@dimen/product_card_subtitle_TextView_default_textSize"
+        app:titleText="@string/product_card_title"
+        app:titleTextSize="@dimen/product_card_title_TextView_default_textSize" />
+</androidx.constraintlayout.widget.ConstraintLayout>

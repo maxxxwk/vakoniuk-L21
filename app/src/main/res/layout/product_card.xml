@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/product_card_padding">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/product_card_title_TextView_marginHorizontal"
+        android:textSize="@dimen/product_card_title_TextView_default_textSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProductImage"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/product_card_subtitle_TextView_marginHorizontal"
+        android:layout_marginBottom="@dimen/product_card_subtitle_TextView_marginBottom"
+        android:textSize="@dimen/product_card_subtitle_TextView_default_textSize"
+        app:layout_constraintBottom_toTopOf="@id/bottomBarrier"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:text="Subtitle" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rbProductRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:numStars="5"
+        android:stepSize="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvProductPrice" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/product_card_price_TextView_default_textSize"
+        app:layout_constraintBottom_toBottomOf="@id/rbProductRating"
+        app:layout_constraintLeft_toRightOf="@id/rbProductRating"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rbProductRating"
+        tools:text="UAH 25.0" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bottomBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="rbProductRating, tvProductPrice" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FanView">
+        <attr name="power" format="enum">
+            <enum name="switched_off" value="0" />
+            <enum name="low" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="high" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="FanControlView">
+        <attr name="fanPower" format="enum">
+            <enum name="switched_off" value="0" />
+            <enum name="low" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="high" value="3" />
+        </attr>
+        <attr name="circleColor" format="color" />
+        <attr name="marksColor" format="color" />
+        <attr name="stateIndicatorColor" format="color" />
+        <attr name="marksTextSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ProductCardView">
+        <attr name="titleText" format="string" />
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="subtitleText" format="string" />
+        <attr name="subtitleTextSize" format="dimension"/>
+        <attr name="productImage" format="reference" />
+        <attr name="rating" format="float" />
+        <attr name="price" format="float" />
+        <attr name="priceTextSize" format="dimension"/>
+    </declare-styleable>
+</resources>

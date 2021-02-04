@@ -11,5 +11,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupListeners()
+    }
+
+    private fun setupListeners() {
+        with(binding) {
+            btnIncreasePower.setOnClickListener {
+                fanView.increasePower()
+                fanControlView.increasePower()
+            }
+            btnDecreasePower.setOnClickListener {
+                fanView.decreasePower()
+                fanControlView.decreasePower()
+            }
+            btnStartSecondTaskActivity.setOnClickListener {
+                SecondActivity.start(this@MainActivity)
+            }
+        }
     }
 }

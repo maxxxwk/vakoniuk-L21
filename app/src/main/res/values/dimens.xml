@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fan_control_view_width">160dp</dimen>
+    <dimen name="fan_control_view_height">160dp</dimen>
+    <dimen name="fan_control_view_marks_default_textSize">16sp</dimen>
+    <dimen name="product_card_padding">4dp</dimen>
+    <dimen name="product_card_title_TextView_marginHorizontal">8dp</dimen>
+    <dimen name="product_card_subtitle_TextView_marginHorizontal">8dp</dimen>
+    <dimen name="product_card_title_TextView_default_textSize">24sp</dimen>
+    <dimen name="product_card_subtitle_TextView_default_textSize">16sp</dimen>
+    <dimen name="product_card_price_TextView_default_textSize">8sp</dimen>
+    <dimen name="product_card_subtitle_TextView_marginBottom">120dp</dimen>
+    <dimen name="second_activity_padding">4dp</dimen>
+</resources>

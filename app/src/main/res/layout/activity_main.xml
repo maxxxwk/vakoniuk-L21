@@ -6,13 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <com.maxxxwk.customviews.FanView
+        android:id="@+id/fanView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:power="middle" />
+
+    <com.maxxxwk.customviews.FanControlView
+        android:id="@+id/fanControlView"
+        android:layout_width="@dimen/fan_control_view_width"
+        android:layout_height="@dimen/fan_control_view_height"
+        app:circleColor="@color/blue"
+        app:fanPower="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fanView"
+        app:layout_constraintVertical_bias="0.3"
+        app:stateIndicatorColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnIncreasePower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/increase_power_button_text"
+        app:layout_constraintBottom_toBottomOf="@id/fanControlView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/fanControlView"
+        app:layout_constraintTop_toTopOf="@id/fanControlView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDecreasePower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/decrease_power_button_text"
+        app:layout_constraintBottom_toBottomOf="@id/fanControlView"
+        app:layout_constraintLeft_toRightOf="@id/fanControlView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fanControlView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStartSecondTaskActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_start_second_task_activity"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fanControlView"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
